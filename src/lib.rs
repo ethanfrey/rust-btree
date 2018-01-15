@@ -7,6 +7,7 @@ struct Node<K, V>
     value: V,
 }
 
+#[derive(Default)]
 pub struct Tree<K, V>
   where K: Ord + Sized, V: Sized {
     root: Option<Node<K, V>>,
@@ -15,10 +16,10 @@ pub struct Tree<K, V>
 impl <K, V> Tree<K, V>
   where K: Ord + Sized, V: Sized {
     // fn insert(&mut self, key: K, value: V) -> Option<V> {
-    fn insert(&mut self, key: K, value: V) {
+    pub fn insert(&mut self, key: K, value: V) {
     }
 
-    fn get(&self, key: &K) -> Option<&V> {
+    pub fn get(&self, key: &K) -> Option<&V> {
         None
     }
 }
